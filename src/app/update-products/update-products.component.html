@@ -1,0 +1,29 @@
+<p>update-products works!</p>
+
+<h3>UpdateProducts</h3>
+
+<form (ngSubmit)="updateProducts()" *ngIf="product">
+    <div>
+    <label for="productId">ProductId:</label>
+    <input type="number" name="productId" [(ngModel)]="product.productId" placeholder="Enter productId" required autofocus readonly>
+   </div>
+   <div>
+   <label for="imageUrl">ImageUrl:</label>
+   <input type="text" name="imageUrl" [(ngModel)]="product.imageUrl" placeholder="Enter imageUrl" required  >
+  </div>
+    <div>
+        <label for="productName">ProductName:</label>
+    <input type="text" name="productName" [(ngModel)]="product.productName" placeholder="Enter productName" required >
+</div>
+<div>
+    <label for="measurement">Measurement:</label>
+    <input type="measurement" name="measurement" [(ngModel)]="product.measurement" placeholder="Enter measurement" required >
+</div>
+<div>
+    <label for="price">price:</label>
+    <input type="price" name="price" [(ngModel)]="product.price"  placeholder="Enter price" required >
+</div>
+    <button type="submit">
+        submit
+    </button>
+</form>

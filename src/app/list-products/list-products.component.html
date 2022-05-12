@@ -1,0 +1,22 @@
+<p>list-products works!</p>
+<h2>List product</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>imageUrl</th>
+            <th>productName</th>
+            <th>measurement</th>
+            <th>price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products;">
+            <td>{{product.imageUrl}}</td>
+            <td>{{product.productName}}</td>
+            <td>{{product.measurement}}</td>
+            <td>{{product.price}}</td>
+            <td><button type="button" (click)="deleteProduct(product.productId)" class="btn btn-danger">Delete</button></td>
+            <td><a routerLink="/update-products/{{product.productId}}" class="btn btn-info">Edit</a></td>
+        </tr>
+    </tbody>
+</table>
